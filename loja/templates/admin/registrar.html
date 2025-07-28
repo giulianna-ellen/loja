@@ -1,0 +1,22 @@
+{% extends "layouts.html" %}
+
+{%block content%}
+
+<div class="text-center h1 text-success">Página de registros</div>
+<div class="container">
+    {% from "_formhelpers.html" import render_field %}
+<form method="post" enctype="multipart/form-data">
+        <div>
+            {{ render_field(form.nome) }}
+            {{ render_field(form.usuario) }}
+            {{ render_field(form.email) }}
+            {{ render_field(form.senha) }}
+        
+        <input type="file" name="Foto">
+
+  </div>
+  <p><input type=submit value=Registrar class="btn btn-success mt-2"></p>
+</form>
+</div>
+
+{%endblock content%}
